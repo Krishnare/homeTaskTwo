@@ -4,13 +4,13 @@ class RequestService {
     const newsData = await await fetch(url)
       .then(data => data.json())
       .catch(err => newsSource.articlesProvider(err));
-      newsSource.articlesProvider(newsData);
+    newsSource.articlesProvider(newsData);
   }
   async apiSourceFetcher(url) {
     const newsSourceSelect = await await fetch(url)
-        .then(source => source.json())
-        .catch(error => newsSource.newsSourceChannel(error))
-        newsSource.newsSourceChannel(newsSourceSelect.sources);
+      .then(source => source.json())
+      .catch(error => newsSource.newsSourceChannel(error));
+    newsSource.newsSourceChannel(newsSourceSelect.sources);
   }
 }
 class newsSourceProvider extends RequestService {
