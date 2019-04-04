@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 class RequestService {
   async getRequest(url) {
     const newsData = await await fetch(url)
@@ -14,9 +14,6 @@ class RequestService {
   }
 }
 class newsSourceProvider extends RequestService {
-  constructor(data) {
-    super(data);
-  }
   articlesProvider(data) {
     const elementId = document.getElementById("newsDetails");
     let returnHtml = "",
